@@ -12,7 +12,7 @@
 
 #define INT int
 
-typedef int time_t;
+//typedef int time_t;
 
 int main()
 {

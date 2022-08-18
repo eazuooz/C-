@@ -38,6 +38,12 @@ struct tData
 
 void Test()
 {
+	int num = 200;
+	int*  p = &num;
+
+	int* t = p + 1;
+
+
 	// 문자열
 	char c = 'a';
 

@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{fe4d6719-3272-4bfc-bb82-78e0d7b36892}</ProjectGuid>
-    <RootNamespace>My10Class</RootNamespace>
+    <ProjectGuid>{acda7c58-fc3c-40cb-a66c-51fa18204a24}</ProjectGuid>
+    <RootNamespace>My11Vector</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>12_Template</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,11 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10_Class.cpp" />
-    <ClCompile Include="CArraay.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CArraay.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

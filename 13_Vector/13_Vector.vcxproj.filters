@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="10_Class.cpp">
+    <ClCompile Include="13_Vector.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CArraay.cpp">
+    <ClCompile Include="yVector.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CArraay.h">
+    <ClInclude Include="yVector.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

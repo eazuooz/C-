@@ -79,6 +79,30 @@ public:
 	}
 };
 
+class MyOStream
+{
+
+public:
+	MyOStream& operator << (const char* _pString)
+	{
+		printf(_pString);
+		return *this;
+	}
+
+	MyOStream& operator << (int _iData)
+	{
+		printf("%d", _iData);
+		return *this;
+	}
+
+	void operator << (void (*pFunc)())
+	{
+		pFunc();
+	}
+};
+
+MyOStream mycout;
+
 int main()
 {
 	CTest k;
@@ -131,6 +155,12 @@ int main()
 		// 원본을 수정 할 때, Pointer 처럼 * 연산을 적어 줄 필요 없이 레퍼런스 변수를 수정하는 것이 곧 원본을 수정하는 것.
 	}
 
+	// cout, cin
+	//printf("Hello %d\n", arrInt[2]);
+
+	//std::cout << "Hello " << arrInt[2] << std::endl;
+
+	//mycout << "Hello " << arrInt[2] << std::MyEndl;
 
     return 0;
 }

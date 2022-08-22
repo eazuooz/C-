@@ -73,6 +73,10 @@ void Test()
 	a = 4500;*/
 }
 
+void Test1()
+{
+}
+
 void Output(int* _pOut)
 {
 	*_pOut = 100;

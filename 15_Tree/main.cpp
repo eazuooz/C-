@@ -6,7 +6,7 @@
 
 int main()
 {
-	ya::pair<char, int> pair({ 'A', 10 });
+	ya::pair<char, int> pp('A', 10);
 
 
 	return 0;

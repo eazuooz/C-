@@ -9,8 +9,12 @@ int main()
 {
     ya::map<int, int> map;
 
-    map.insert(std::make_pair(1, 100));
-    map.insert(std::make_pair(2, 200));
+    map.insert(std::make_pair(96, 100));
+    map.insert(std::make_pair(85, 200));
+    map.insert(std::make_pair(110, 200));
+    map.insert(std::make_pair(64, 100));
+    map.insert(std::make_pair(90, 200));
+    map.insert(std::make_pair(36, 200));
 
     return 0;
 }

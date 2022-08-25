@@ -1,9 +1,11 @@
 #pragma once
 #include "yaPair.h"
 
+//#define REDBLACK 
 
 namespace ya
 {
+#ifdef REDBLACK
 	enum Color
 	{
 		RED,
@@ -25,7 +27,7 @@ namespace ya
 			Node* left;
 			Node* right;
 
-			Node() 
+			Node()
 				: key(NULL)
 				, value(NULL)
 				, color(Color::BLACK)
@@ -94,7 +96,6 @@ namespace ya
 
 			return;
 		}
-
 		void insertFixUp(Node* node)
 		{
 			//root 노드가 아니고 부모색이 red 라면
@@ -130,7 +131,6 @@ namespace ya
 			}
 			mRoot->color = Color::BLACK;
 		}
-		//dest 에 소스를 이식
 		void Transplant(Node* dest, Node* source)
 		{
 			if (dest->parent == nullptr)
@@ -142,7 +142,6 @@ namespace ya
 
 			source->parent = dest->parent;
 		}
-		
 		void RotateLeft(Node* node)
 		{
 			Node* buf;
@@ -170,7 +169,6 @@ namespace ya
 			node->parent = buf;
 			buf->left = node;
 		}
-
 		void RotateRight(Node* node)
 		{
 			Node* buf;
@@ -199,11 +197,108 @@ namespace ya
 			buf->right = node;
 		}
 
-
 	private:
 		Node* mRoot;
 		Node* mLeafNode;;
 	};
+
+#else
+
+
+	template <typename kT, typename vT>
+	class map
+	{
+	public:
+		class Node
+		{
+		public:
+			kT key;
+			vT value;
+			int height;
+			Node* left;
+			Node* right;
+
+		public:
+			Node()
+				: key(NULL)
+				, value(NULL)
+				, height(1)
+				, left(nullptr)
+				, right(nullptr)
+			{
+
+			}
+			Node(kT& key, vT& value)
+				: key(key)
+				, value(value)
+				, height(1)
+				, left(nullptr)
+				, right(nullptr)
+			{
+
+			}
+			~Node() = default;
+		};
+
+	public:
+		map()
+		{
+
+		}
+		~map()
+		{
+
+		}
+
+
+		void insert(std::pair<kT, vT> pair)
+		{
+			if (mRoot == nullptr)
+			{
+				mRoot = newNode(pair);
+				return;
+			}
+			insertNode(pair, mRoot, 0);
+		}
+
+
+
+	private:
+		Node* newNode(std::pair<kT, vT> pair)
+		{
+			Node* node = new Node(pair.first, pair.second);
+			return node;
+		}
+
+		void insertNode(std::pair<kT, vT> pair, Node* curNode, size_t height)
+		{
+			if (pair.first < curNode->key)
+			{
+				if (curNode->left != nullptr)
+					insertNode(pair, curNode->left, height + 1);
+				else
+					curNode->left = newNode(pair);
+
+				curNode->height = curNode->left->height + 1;
+			}
+			else
+			{
+				if (curNode->right != nullptr)
+					insertNode(pair, curNode->right, height + 1);
+				else
+					curNode->right = newNode(pair);
+
+				curNode->height = curNode->right->height + 1;
+			}
+
+			
+		}
+
+	private:
+		Node* mRoot;
+	};
+#endif // REDBLACK
+
 
 
 }

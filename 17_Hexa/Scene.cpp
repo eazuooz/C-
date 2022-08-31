@@ -1,5 +1,7 @@
 #include "Scene.h"
 
+int Scene::mLevel = 0;
+
 void Scene::SetColor(int color)
 {
 	static HANDLE std_output_handle = GetStdHandle(STD_OUTPUT_HANDLE);

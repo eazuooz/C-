@@ -3,7 +3,16 @@
 #include <conio.h>
 #include <Windows.h>
 
-enum 
+#define EXT_KEY			0xffffffe0	//확장키 인식값 
+#define KEY_LEFT		0x4b
+#define KEY_RIGHT		0x4d
+#define KEY_UP			0x48
+#define KEY_DOWN		0x50
+#define KEY_SPACE		0x20
+#define ABS_X			6
+#define ABS_Y			2
+
+enum
 {
 	BLACK,      /*  0 : 까망 */
 	DARK_BLUE,    /*  1 : 어두운 파랑 */

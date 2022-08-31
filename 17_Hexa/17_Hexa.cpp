@@ -1,17 +1,27 @@
 ﻿#include "TitleScene.h"
-
-
-
-
+#include "GameScene.h"
+#include "StageScene.h"
 
 
 int main()
 {
-    TitleScene title;
-    title.PrintScene();
-    
 
+	TitleScene title;
+	title.PrintScene();
 
-    return 0;
+	StageScene stage;
+	stage.PrintScene();
+
+	GameScene game;
+	game.InitStage();
+	game.InitData();
+
+	while (true)
+	{
+		game.Update();
+	}
+
+	
+
+	return 0;
 }
-

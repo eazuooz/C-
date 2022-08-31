@@ -88,10 +88,10 @@ void GameScene::Update()
 	{
 		if (_kbhit())
 		{
-			keytemp = _getche();
+			keytemp = _getch();
 			if (keytemp == EXT_KEY)
 			{
-				keytemp = _getche();
+				keytemp = _getch();
 				show_cur_block(blank_block, cur_x, cur_y);	//이동하기전 위치의 블럭 모양을지운다
 				switch (keytemp)
 				{
@@ -124,8 +124,8 @@ void GameScene::Update()
 						{
 							is_gameover = 1;
 						}
-						else {
-
+						else 
+						{
 							find_fair(0);
 							PrintMap();
 							PrintGameScore();
@@ -150,9 +150,7 @@ void GameScene::Update()
 					PrintMap();
 					PrintGameScore();
 				}
-
 			}
-
 			show_cur_block(cur_block, cur_x, cur_y);
 		}
 

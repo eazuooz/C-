@@ -75,7 +75,7 @@ int main()
 
 
 
-void  ()
+void  Test()
 {
 	int a = 0;
 	int b = 10;

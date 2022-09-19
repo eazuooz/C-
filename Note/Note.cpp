@@ -3,26 +3,23 @@
 
 #include <iostream>
 
+
+class A
+{
+	void test()
+	{
+
+	}
+
+	virtual ~A()
+	{
+
+	}
+};
+
 int main()
 {
-    int x;
-    int y;
-    int Pos;
-    std::cin >> x >> y;
+	int len = sizeof(A);
 
-    Pos = x * y;
-
-    if (Pos < 50)
-    {
-        std::cout << "오버 사이즈";
-    }
-    else if (30 < Pos && Pos > 50)
-    {
-        std::cout << "정 사이즈";
-    }
-    else
-    {
-        std::cout << "스몰 사이즈";
-    }
-
+	return 0;
 }

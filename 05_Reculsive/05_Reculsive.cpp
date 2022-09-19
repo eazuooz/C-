@@ -1,24 +1,25 @@
 ﻿#include <iostream>
+#include "Test.h"
 
-int dfs(int level)
-{
-	if (level == 3)
-		return;
-
-
-	dfs(level + 1);
-}
-
-
-int dfs(int level)
-{
-	if (level == 3)
-		return;
-
-
-	dfs(level + 1);
-	dfs(level + 1);
-}
+//int dfs(int level)
+//{
+//	if (level == 3)
+//		return;
+//
+//
+//	dfs(level + 1);
+//}
+//
+//
+//int dfs(int level)
+//{
+//	if (level == 3)
+//		return;
+//
+//
+//	dfs(level + 1);
+//	dfs(level + 1);
+//}
 
 int Fibonachi(int number)
 {
@@ -39,6 +40,12 @@ int Fibonachi(int number)
 int main()
 {
 	int num = Fibonachi(4);
+
+	g = 99;
+	number = 200;
+	test();
+
+	
 
 	return 0;
 }
